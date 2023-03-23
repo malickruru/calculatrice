@@ -18,6 +18,7 @@ function AfficherErreur(err) {
 
 
 function MajCalgo(nbr) {
+    
     operation += nbr;
     // ecrire l'operation à l'écran
     AfficherOperation()
@@ -45,7 +46,9 @@ function egal() {
 // lier les au buttons
 
 $('.nombre,.operateur').click(function (e) {
-    MajCalgo(e.currentTarget.innerText)
+    classe = e.currentTarget.className
+    value = e.currentTarget.innerText
+    classe == 'operateur' ? MajCalgo(` ${value} `) : MajCalgo(value)
 });
 
 $('#effacer').click(function (e) {

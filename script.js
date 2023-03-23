@@ -27,7 +27,8 @@ function effacer(){
 
 //convertir la chaine de caractère en opération et afficher le résultat
 function egal(){
-    operationResultat =  eval(operation);
+    // arrondir le résultat
+    operationResultat = eval(operation).toFixed(2)  ;
     AfficherOperation(" = &nbsp; "+"<label STYLE='color:green; padding:0; margin:0;'>" +operationResultat+" </label> ")
 }
 

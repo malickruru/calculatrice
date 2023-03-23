@@ -30,6 +30,12 @@ function effacer() {
     AfficherOperation()
 }
 
+function backspace(){
+    //supprimer le dernier caractère d'une chaine
+    operation = operation.slice(0,-1)
+    AfficherOperation()
+}
+
 //convertir la chaine de caractère en opération et afficher le résultat
 function egal() {
     try {
@@ -43,7 +49,11 @@ function egal() {
     AfficherOperation(" = &nbsp; " + "<label STYLE='color:green; padding:0; margin:0;'>" + operationResultat + " </label> ")
 }
 
-// lier les au buttons
+
+
+
+
+//* lier les au buttons
 
 $('.nombre,.operateur').click(function (e) {
     classe = e.currentTarget.className
@@ -59,3 +69,7 @@ $('.egal').click(function (e) {
     egal()
 });
 
+
+$('#backspace').click(function (e) {
+    backspace()
+});

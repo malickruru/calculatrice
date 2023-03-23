@@ -46,6 +46,7 @@ function egal() {
         AfficherErreur("<label STYLE='color:red; padding:0; margin:0;'>expression invalide veuillez effacer et recommencer </label> ")
         return
     }
+    majHistorique(operation)
     AfficherOperation(" = &nbsp; " + "<label STYLE='color:green; padding:0; margin:0;'>" + operationResultat + " </label> ")
 }
 
@@ -72,4 +73,10 @@ $('.egal').click(function (e) {
 
 $('#backspace').click(function (e) {
     backspace()
+});
+
+// modifier l'operation lorsqu'on clique sur un element de l'historique
+$("#historyValue li").click(function (e) { 
+    effacer();
+    MajCalgo(e.currentTarget.innerText)
 });

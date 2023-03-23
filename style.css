@@ -19,8 +19,9 @@ h1{
     padding: 20px;
 
   }
+
   
-  #ecranDeCalcul {
+  .ecranDeCalcul {
     background-color: #fff;
     color: black;
     width: 95%;
@@ -32,6 +33,8 @@ h1{
     padding: 5px 15px;
     box-sizing: border-box;
     margin: auto;
+    overflow-y: hidden;
+    overflow-x: auto;
   }
   .clavier {
     display: flex;
@@ -101,4 +104,29 @@ h1{
   .egal:hover {
     opacity: 0.6;
     cursor: pointer;
+  }
+
+  span {
+    white-space: nowrap;
+  }
+
+  .ecranDeCalcul::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+  /* Track */
+  .ecranDeCalcul::-webkit-scrollbar-track {
+    background: #fff;
+  }
+  
+  /* Handle */
+  .ecranDeCalcul::-webkit-scrollbar-thumb {
+    background: #0c0c0c;
+    width: 3px;
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  .ecranDeCalcul::-webkit-scrollbar-thumb:hover {
+    background: #555;
   }
